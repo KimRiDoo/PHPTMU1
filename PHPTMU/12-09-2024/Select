@@ -1,0 +1,26 @@
+<?php
+// Kết nối đến cơ sở dữ liệu
+$mysqli = new mysqli("localhost", "username", "password", "database");
+
+// Kiểm tra kết nối
+if ($mysqli->connect_error) {
+    die("Kết nối thất bại: " . $mysqli->connect_error);
+}
+
+// Câu truy vấn lấy dữ liệu
+$sql = "SELECT column1, column2 FROM your_table_name";
+$result = $mysqli->query($sql);
+
+// Hiển thị dữ liệu
+if ($result->num_rows > 0) {
+    // Duyệt qua các dòng dữ liệu
+    while($row = $result->fetch_assoc()) {
+        echo "Column1: " . $row["column1"] . " - Column2: " . $row["column2"] . "<br>";
+    }
+} else {
+    echo "Không có dữ liệu.";
+}
+
+// Đóng kết nối
+$mysqli->close();
+?>
