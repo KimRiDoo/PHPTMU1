@@ -1,0 +1,29 @@
+<?php
+try {
+    // Kết nối đến cơ sở dữ liệu
+    $pdo = new PDO("mysql:host=localhost;dbname=database_name", "username", "password");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Câu truy vấn thêm dữ liệu
+    $sql = "INSERT INTO your_table_name (column1, column2) VALUES (:value1, :value2)";
+
+    // Chuẩn bị câu truy vấn
+    $stmt = $pdo->prepare($sql);
+
+    // Gán giá trị cho các tham số
+    $stmt->bindParam(':value1', $value1);
+    $stmt->bindParam(':value2', $value2);
+
+    // Gán giá trị cụ thể và thực thi câu truy vấn
+    $value1 = 'Sample 1';
+    $value2 = 'Sample 2';
+    $stmt->execute();
+
+    echo "Thêm dữ liệu thành công!";
+} catch (PDOException $e) {
+    echo "Lỗi: " . $e->getMessage();
+}
+
+// Đóng kết nối
+$pdo = null;
+?>
