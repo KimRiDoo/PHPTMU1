@@ -1,0 +1,23 @@
+<?php
+try {
+    // Kết nối đến cơ sở dữ liệu
+    $pdo = new PDO("mysql:host=localhost;dbname=database_name", "username", "password");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Câu truy vấn lấy dữ liệu
+    $sql = "SELECT column1, column2 FROM your_table_name";
+
+    // Chuẩn bị và thực thi câu truy vấn
+    $stmt = $pdo->query($sql);
+
+    // Duyệt qua các kết quả và hiển thị
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        echo "Column1: " . $row['column1'] . " - Column2: " . $row['column2'] . "<br>";
+    }
+} catch (PDOException $e) {
+    echo "Lỗi: " . $e->getMessage();
+}
+
+// Đóng kết nối
+$pdo = null;
+?>
