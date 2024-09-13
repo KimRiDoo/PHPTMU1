@@ -1,0 +1,23 @@
+<?php
+// Kết nối đến cơ sở dữ liệu
+$mysqli = new mysqli("localhost", "username", "password", "database");
+
+// Kiểm tra kết nối
+if ($mysqli->connect_error) {
+    die("Kết nối thất bại: " . $mysqli->connect_error);
+}
+
+// Câu truy vấn cập nhật dữ liệu
+$sql = "UPDATE your_table_name SET column1='new_value' WHERE id=your_id";
+
+// Thực hiện câu truy vấn
+if ($mysqli->query($sql) === TRUE) {
+    echo "Cập nhật dữ liệu thành công!";
+} else {
+    echo "Lỗi: " . $sql . "<br>" . $mysqli->error;
+}
+
+// Đóng kết nối
+$mysqli->close();
+?>
+
