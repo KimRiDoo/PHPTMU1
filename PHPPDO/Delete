@@ -1,0 +1,27 @@
+<?php
+try {
+    // Kết nối đến cơ sở dữ liệu
+    $pdo = new PDO("mysql:host=localhost;dbname=database_name", "username", "password");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Câu truy vấn xóa dữ liệu
+    $sql = "DELETE FROM your_table_name WHERE id = :id";
+
+    // Chuẩn bị câu truy vấn
+    $stmt = $pdo->prepare($sql);
+
+    // Gán giá trị cho tham số
+    $stmt->bindParam(':id', $id);
+
+    // Gán giá trị cụ thể và thực thi câu truy vấn
+    $id = 1; // ID của bản ghi cần xóa
+    $stmt->execute();
+
+    echo "Xóa dữ liệu thành công!";
+} catch (PDOException $e) {
+    echo "Lỗi: " . $e->getMessage();
+}
+
+// Đóng kết nối
+$pdo = null;
+?>
