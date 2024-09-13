@@ -1,0 +1,23 @@
+<?php
+// Kết nối đến cơ sở dữ liệu
+$mysqli = new mysqli("localhost", "username", "password", "database");
+
+// Kiểm tra kết nối
+if ($mysqli->connect_error) {
+    die("Kết nối thất bại: " . $mysqli->connect_error);
+}
+
+// Câu truy vấn xóa dữ liệu
+$sql = "DELETE FROM your_table_name WHERE id=your_id";
+
+// Thực hiện câu truy vấn
+if ($mysqli->query($sql) === TRUE) {
+    echo "Xóa dữ liệu thành công!";
+} else {
+    echo "Lỗi: " . $sql . "<br>" . $mysqli->error;
+}
+
+// Đóng kết nối
+$mysqli->close();
+?>
+
