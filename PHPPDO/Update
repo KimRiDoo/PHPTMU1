@@ -1,0 +1,29 @@
+<?php
+try {
+    // Kết nối đến cơ sở dữ liệu
+    $pdo = new PDO("mysql:host=localhost;dbname=database_name", "username", "password");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Câu truy vấn cập nhật dữ liệu
+    $sql = "UPDATE your_table_name SET column1 = :new_value WHERE id = :id";
+
+    // Chuẩn bị câu truy vấn
+    $stmt = $pdo->prepare($sql);
+
+    // Gán giá trị cho các tham số
+    $stmt->bindParam(':new_value', $new_value);
+    $stmt->bindParam(':id', $id);
+
+    // Gán giá trị cụ thể và thực thi câu truy vấn
+    $new_value = 'Updated Value';
+    $id = 1; // ID của bản ghi cần cập nhật
+    $stmt->execute();
+
+    echo "Cập nhật dữ liệu thành công!";
+} catch (PDOException $e) {
+    echo "Lỗi: " . $e->getMessage();
+}
+
+// Đóng kết nối
+$pdo = null;
+?>
