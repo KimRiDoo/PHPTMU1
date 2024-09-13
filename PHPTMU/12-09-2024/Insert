@@ -1,0 +1,22 @@
+<?php
+// Kết nối đến cơ sở dữ liệu
+$mysqli = new mysqli("localhost", "username", "password", "database");
+
+// Kiểm tra kết nối
+if ($mysqli->connect_error) {
+    die("Kết nối thất bại: " . $mysqli->connect_error);
+}
+
+// Câu truy vấn thêm dữ liệu
+$sql = "INSERT INTO your_table_name (column1, column2) VALUES ('value1', 'value2')";
+
+// Thực hiện câu truy vấn
+if ($mysqli->query($sql) === TRUE) {
+    echo "Thêm dữ liệu thành công!";
+} else {
+    echo "Lỗi: " . $sql . "<br>" . $mysqli->error;
+}
+
+// Đóng kết nối
+$mysqli->close();
+?>
