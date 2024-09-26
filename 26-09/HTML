@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE COFFEE HOUSE</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        body, html {
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+        }
+
+        .bgimg {
+            background-position: center;
+            background-size: cover;
+            background-image: url("/w3images/coffeehouse.jpg");
+            min-height: 75%;
+        }
+
+        .menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <div class="padding toolbar-color toolbar-flex">
+            <div class="toolbar-ingredient">
+                <a href="#" class="ingredient-button toolbar-color block">HOME</a>
+            </div>
+            <div class="toolbar-ingredient">
+                <a href="#about" class="ingredient-button toolbar-color block">ABOUT</a>
+            </div>
+            <div class="toolbar-ingredient">
+                <a href="#menu" class="ingredient-button toolbar-color block">MENU</a>
+            </div>
+            <div class="toolbar-ingredient">
+                <a href="#where" class="ingredient-button toolbar-color block">WHERE</a>
+            </div>
+        </div>
+    </div>
+    <!-- The coffee image -->
+    <header class="img-flex img-container img-grayscale" id="home">
+        <div class="display-bottom-left center img-padding">
+            <span class="tag">Open from 6am to 5pm</span>
+        </div>
+        <div class="display-middle center">
+            <span class="text-color" style="font-size: 90px;">
+                the
+                <br> Café
+            </span>
+        </div>
+        <div class="display-bottom-right center img-padding">
+            <span class="text-color">15 Adr street, 5015</span>
+        </div>
+    </header>
+    <!-- The cofffee extension -->
+    <div class="extension-flex">
+        <!-- About extension -->
+        <div class="extension-container" id="about">
+            <div class="extension-content" style="max-width: 700%">
+                <h5 class="center about-padding">
+                    <span class="tag wide">ABOUT THE COFFEE</span>
+                </h5>
+                <p>
+                    The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>
+                    In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.
+                </p>
+                <div class="panel left-bar light-grey">
+                    <p>
+                        <i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i>
+                    </p>
+                    <p>
+                        Chef, Coffeeist and Owner: Liam Brown
+                    </p>
+                </div>
+                <img src="https://www.w3schools.com/w3images/coffeeshop.jpg" alt="Cofffee image" class="margin-top" style="width: 100%;max-width: 1000px;">
+                <p>
+                    <strong>Opening hours:</strong>
+                    everyday from 6am to 5pm.
+                </p>
+                <p>
+                    <strong>Adress:</strong>
+                    15 Adr street, 5015, NY
+                </p>
+            </div>
+        </div>
+        <!-- Menu extension -->
+        <div class="extension-container" id="menu">
+            <div class="extension-content" style="max-width: 700%">
+                <h5 class="center extension-padding-48">
+                    <span class="tag wide">THE MENU</span>
+                </h5>
+                <div class="row center padding card">
+                    <div class="js-pd"> 
+                        <div class="col tab-width tablink menu-choose">Eat</div>
+                    </div>
+                    <div class="js-pd"> 
+                        <div class="col tab-width tablink menu-choose">Drink</div>
+                      </div>
+                </div>
+                <!-- Eat menu -->
+                <div id="menu-part" class="extension-container extension-padding-48 card">
+                    <h5>Bread Basket</h5>
+                    <p class="text-gray">Assortment of fresh baked fruit breads and muffins 5.50</p>
+                    <br>
+                    <h5>Honey Almond Granola with Fruits</h5>
+                    <p class="text-gray">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+                    <br>
+                    <h5>Belgian Waffle</h5>
+                    <p class="text-gray">Vanilla flavored batter with malted flour 7.50</p>
+                    <br>
+                    <h5>Scrambled eggs</h5>
+                    <p class="text-gray">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+                    <br>
+                    <h5>Blueberry Pancakes</h5>
+                    <p class="text-gray">With syrup, butter and lots of berries 8.50</p>
+                </div>
+                <!-- Drinks menu -->
+                <div id="menu-part" class="extension-container extension-padding-48 card">
+                    <h5>Coffee</h5>
+                    <p class="text-gray">Regular coffee 2.50</p>
+                    <br>
+                    <h5>Chocolato</h5>
+                    <p class="text-gray">Chocolate espresso with milk 4.50</p>
+                    <br>
+                    <h5>Corretto</h5>
+                    <p class="text-gray">Whiskey and coffee 5.00</p>
+                    <br>
+                    <h5>Iced tea</h5>
+                    <p class="text-gray">Hot tea, except not hot 3.00</p>
+                    <br>
+                    <h5>Soda</h5>
+                    <p class="text-gray">Coke, Sprite, Fanta, etc. 2.50</p>
+                </div>
+                <img src="https://www.w3schools.com/w3images/coffeehouse2.jpg" alt="The Coffee house image" style="width: 100%; max-width: 1000px; margin-top: 32px;">
+            </div>    
+        </div>
+        <!-- Contact extension -->
+        <div class="extension-container" id="where" style="padding-bottom: 32px;">
+            <div class="extension-content" style="max-width: 700px;">
+                <h5 class="center extension-padding-48">
+                    <span class="tag wide">WHERE TO FIND US</span>
+                </h5>
+                <p>Find us at number 75, HoTungMau road, Cau Giay, Hanoi.</p>
+                <img src="https://photo-cms-giaoduc.epicdn.me/w1000/Uploaded/2024/cadwpmdwp/2024_04_09/gdvn-a2-2-8271.jpg" alt="Location image" class="location-img" style="width: 100%;">
+                <p>
+                    <span class="tag">FYI!</span>
+                     We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.
+                </p>
+                <p>
+                    <strong>Reverse</strong>
+                     a table, ask for today's special or just send us a message:
+                </p>
+                <form action="/action_page.php" target="_blank">
+                    <p>
+                        <input class="input input-padding border" type="text" placeholder="Name" required name="Name">
+                    </p>
+                    <p>
+                        <input class="input input-padding border" type="number" placeholder="How many people" required name="People">
+                    </p>
+                    <p>
+                        <input class="input input-padding border" type="datetime-local" placeholder="Date and time" required name="Date" value="2023-11-1T20:00">
+                    </p>
+                    <p>
+                        <input class="input input-padding border" type="text" placeholder="Message \ Special requirements" required name="Message">
+                    </p>
+                    <p>
+                        <button class="input-button input-color" type="submit">SEND MESSAGE</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="center light-grey extension-padding-48">
+        <p>Powered by
+            <a href="https://www.facebook.com/profile.php?id=100015637936835" title="THANG" target="_blank" class="info">THANG</a>
+        </p>
+    </footer>
+    <!-- Tabbed menu (JS) →
+<script src="script.js"></script>
+    <script>
+                const menus = Array.from(document.getElementsByClassName('menu-choose'));
+                const tabLinks = document.querySelectorAll('#menu-part')
+
+                menus[0].classList.add('tab-dark-grey')
+                tabLinks[0].classList.add('active')
+
+                menus.forEach(function(menu, index) {
+                    const tabLink = tabLinks[index]
+
+                        menu.onclick = function() {
+                            document.querySelector('.menu-choose.tab-dark-grey').classList.remove('tab-dark-grey')
+                            this.classList.add('tab-dark-grey')
+                            document.querySelector('#menu-part.active').classList.remove('active')
+                            tabLink.classList.add('active')
+                        }
+                })
+    </script>
+</body>
+</html>
